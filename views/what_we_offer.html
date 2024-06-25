@@ -6,14 +6,17 @@
 </head>
 
 <body>
-   <h1>What we offer and why we are different</h1>
-<ul class="service_list_ul">
-   <li class="service_list_li link_action">Access Control</li>
-   <li class="service_list_li link_action">CCTV</li>
-   <li class="service_list_li link_action">Workmanship</li>
-   <li class="service_list_li link_action">Pride</li>
-   <li class="service_list_li link_action">Intergirty</li>
-</ul>
+   <h1 style="margin-left: 25px;">What we offer and why we are different</h1>
+   <div class="offer_container">
+      <ul class="service_list_ul">
+         <li class="service_list_li link_action" hx-get="/sections/access_control.html" hx-target="#offer_display" hx-trigger="click">Access Control</li>
+         <li class="service_list_li link_action">CCTV</li>
+         <li class="service_list_li link_action">Workmanship</li>
+         <li class="service_list_li link_action">Pride</li>
+         <li class="service_list_li link_action">Intergirty</li>
+      </ul>
+      <div id="offer_display"></div>
+   </div>
 </body>
 
 </html>
