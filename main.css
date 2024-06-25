@@ -104,3 +104,15 @@ body {
 .about {
    margin: 0 50px 0 50px;
 }
+
+.service_list_ul {
+   display: flex;
+   flex-direction: column;
+   
+}
+
+.service_list_li {
+   display: flex;
+   width: fit-content;
+}
+
