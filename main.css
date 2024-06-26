@@ -62,13 +62,6 @@ body {
    gap: 10px;
 }
 
-.footer {
-   height: 50px;
-   background-color: aqua;
-   bottom: 0px;
-   left: 0px;
-}
-
 .info_center {
    display: flex;
    justify-content: center; 
@@ -108,8 +101,9 @@ body {
 .service_list_ul {
    display: flex;
    flex-direction: column;
-   border-right: 1px solid rgb(255, 0, 255);
    margin: 15px;
+   position: sticky;
+   min-width: 150px;
 }
 
 .service_list_li {
@@ -122,3 +116,41 @@ body {
    grid-template-columns: .75fr 2fr;
 }
 
+.sidebar {
+   margin-right: 15px;
+   border-right: 1px solid rgb(255, 0, 255);
+}
+
+footer {
+   background-color: #2c3e50; /* Dark blue background */
+   color: white; /* White text */
+   text-align: center;
+   padding: 20px 0; /* Space around the text */
+   font-family: Arial, sans-serif; /* Font style */
+   border-top: 5px solid rgb(255, 0, 255); /* Red top border */
+}
+
+footer .footer-content {
+   max-width: 800px;
+   margin: auto; /* Center the content */
+}
+
+footer a {
+   color: rgb(255, 0, 255); /* Red links */
+   text-decoration: none;
+   transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+footer a:hover {
+   color: #c0392b; /* Darker red on hover */
+}
+
+footer p {
+   margin: 5px 0; /* Space between paragraphs */
+}
+
+footer p strong {
+   font-size: 1.2em; /* Larger font for company name */
+   display: block;
+   margin-bottom: 10px;
+}
