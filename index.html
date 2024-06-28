@@ -25,29 +25,38 @@
    <header>
       <div class="container_p">
          <img src="https://placehold.co/50x50?text=Mind%27s+Eye+Security" alt="Company Logo" id="logo_img">
+
+         <div class="link_action" hx-get="/views/home.html" hx-target="#display" hx-trigger="load"></div>
+
          <nav class="navEl">
             <ul class="navFormat">
-               <li class="link_action" hx-get="/index.html" hx-target="#display" hx-trigger="click">Home</li>
+               <li class="link_action" hx-get="/views/home.html" hx-target="#display" hx-trigger="click">Home</li>
                <li class="link_action" hx-get="/views/about.html" hx-target="#display" hx-trigger="click">About</li>
-               <li class="link_action" hx-get="/views/what_we_offer.html" hx-target="#display" hx-trigger="click">What We Offer</li>
-               <li class="link_action" hx-get="/views/why_choose_us.html" hx-target="#display" hx-trigger="click">Why Choose Us</li>
-               <li class="link_action" hx-get="/views/contact.html" hx-target="#display" hx-trigger="click">Contact Us</li>
+               <li class="link_action" hx-get="/views/what_we_offer.html" hx-target="#display" hx-trigger="click">What
+                  We Offer</li>
+               <li class="link_action" hx-get="/views/why_choose_us.html" hx-target="#display" hx-trigger="click">Why
+                  Choose Us</li>
+               <li class="link_action" hx-get="/views/contact.html" hx-target="#display" hx-trigger="click">Contact Us
+               </li>
             </ul>
          </nav>
       </div>
    </header>
 
+
    <div id="display"></div>
 
    <footer>
       <div class="footer-content">
-          <p><strong>Minds Eye Security</strong></p>
-          <p>Located in Wisconsin, serving all of Wisconsin</p>
-          <p>Email: <a href="mailto:info@mindseyesecurity.com">info@mindseyesecurity.com</a></p>
-          <p>Phone: <a href="tel:+16085551234">+1 (608) 555-1234</a></p>
+         <p><strong>Minds Eye Security</strong></p>
+         <p>Located in Wisconsin, serving all of Wisconsin</p>
+         <p>Email: <a href="mailto:info@mindseyesecurity.com">info@mindseyesecurity.com</a></p>
+         <p>Phone: <a href="tel:+16085551234">+1 (608) 555-1234</a></p>
       </div>
-  </footer>
+   </footer>
 
+
+   
 </body>
 
 </html>
