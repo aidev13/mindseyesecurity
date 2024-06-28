@@ -55,6 +55,8 @@ body {
    font-size: 20px;
 }
 
+/* @media screen and (max-width: 834px)  */
+
 .about_section {
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;

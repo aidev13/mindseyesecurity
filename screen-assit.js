@@ -5,7 +5,7 @@ function updateSize() {
     "<p>Width: " +
     window.innerWidth +
     ", Height: " +
-    window.innerHeight +
+    window.innerHeight + " || " +
     "</p>";
 }
 
