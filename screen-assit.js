@@ -2,11 +2,10 @@ let size = document.getElementById("size");
 
 function updateSize() {
   size.innerHTML =
-    "<p id='sa_title'>Width: " +
+    "<p id='sa_title'> Screen W: " +
     window.innerWidth +
-    ", Height: " +
+    ", H: " +
     window.innerHeight +
-    " || " +
     "</p>";
 }
 
@@ -15,6 +14,8 @@ updateSize();
 window.addEventListener("resize", updateSize);
 
 let elName = document.getElementById("getName");
+const checkBox = document.querySelector('input')
+
 
 window.addEventListener("mouseover", (e) => {
   const tagName = e.target.tagName.toLowerCase();
@@ -22,12 +23,20 @@ window.addEventListener("mouseover", (e) => {
   const className = e.target.className
     ? `.${e.target.className.split(" ").join(".")}`
     : "";
-  elName.innerText = `Hovered Element: ${tagName}${id}${className}`;
+
+    if(e.target.id === 'sa_title' || e.target.id === 'draggable' || e.target.id === 'size' || e.target.id === 'getName' || e.target.id === 'checkBox') {
+      elName.innerText = ''
+    } else
+      elName.innerText = `Element: ${tagName}${id}${className}`;
+
+   // Check to see if user wants a border on or off
+   if(checkBox.checked) {
+      if (e.target.id === "draggable" || e.target.id === "size" || e.target.id === "getName" || e.target.id === 'sa_title' || e.target.id === 'checkBox' || e.target.id === 'borderCheck') {
+        e.target.classList.add(null);
+      } else e.target.classList.add("hovered-element");
+   }
 
   // Add border when element is hovered
-  if (e.target.id === "draggable" || e.target.id === "size" || e.target.id === "getName" || e.target.id === 'sa_title') {
-    e.target.classList.add(null);
-  } else e.target.classList.add("hovered-element");
 });
 
 window.addEventListener("mouseout", (e) => {
