@@ -2,10 +2,11 @@ let size = document.getElementById("size");
 
 function updateSize() {
   size.innerHTML =
-    "<p>Width: " +
+    "<p id='sa_title'>Width: " +
     window.innerWidth +
     ", Height: " +
-    window.innerHeight + " || " +
+    window.innerHeight +
+    " || " +
     "</p>";
 }
 
@@ -22,6 +23,16 @@ window.addEventListener("mouseover", (e) => {
     ? `.${e.target.className.split(" ").join(".")}`
     : "";
   elName.innerText = `Hovered Element: ${tagName}${id}${className}`;
+
+  // Add border when element is hovered
+  if (e.target.id === "draggable" || e.target.id === "size" || e.target.id === "getName" || e.target.id === 'sa_title') {
+    e.target.classList.add(null);
+  } else e.target.classList.add("hovered-element");
+});
+
+window.addEventListener("mouseout", (e) => {
+  // Remove border when mouse leaves the element
+  e.target.classList.remove("hovered-element");
 });
 
 // Make it draggable
